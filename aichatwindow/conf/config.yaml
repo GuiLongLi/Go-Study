@@ -1,0 +1,5 @@
+common:
+  #http://www.tuling123.com 图灵机器人接口
+  tuling:
+    apikey: 123123123
+    api: http://openapi.tuling123.com/openapi/api/v2

@@ -1,0 +1,13 @@
+common:
+  #http://www.lbldy.com/ 电影资源接口
+  lbldy:
+    #搜索电影接口  http://www.lbldy.com/search/星球大战
+    search: http://www.lbldy.com/search/
+    #获取下载链接  http://www.lbldy.com/movie/123.html
+    download: http://www.lbldy.com/movie/%s.html
+  server: #服务器配置
+    runmode: debug               # 开发模式, debug, release, test
+    addr: :6667                  # HTTP绑定端口
+    name: apiserver              # API Server的名字
+    url: :6667   # pingServer函数请求的API服务器的ip:port
+    max_ping_count: 10           # pingServer函数尝试的次数

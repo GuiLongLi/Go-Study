@@ -1,0 +1,14 @@
+common:
+  #https://help.aliyun.com/document_detail/87712.html?spm=a2c4g.11186623.6.882.36c55837XaJBzg 阿里云oss接口
+  aliyunoss:
+    accessid: XXX                # 阿里云的accessid
+    accesskey: XXX               # 阿里云的accesskey
+    endpoint: XXX                # 阿里云的endpoint
+    bucket: XXX                  # 阿里云的 bucket名称
+    uploaddir: test              # 所有上传文件都存在这个目录下面
+  server: #服务器配置
+    runmode: debug               # 开发模式, debug, release, test
+    addr: :6668                  # HTTP绑定端口
+    name: ossserver              # API Server的名字
+    url: :6668   # pingServer函数请求的API服务器的ip:port
+    max_ping_count: 10           # pingServer函数尝试的次数

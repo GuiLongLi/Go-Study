@@ -1,0 +1,12 @@
+//指定版本
+//注意proto3与proto2的写法有些不同
+syntax = "proto3";
+//包名，通过protoc生成时go文件时
+package protobuf;
+
+//声明一个消息体描述一个请求或者响应的消息格式
+message HelloWorld {
+    int32 id = 1;
+    string name = 2;
+    int32 sin = 3;
+}

@@ -1,0 +1,11 @@
+common:
+  #http://www.tuling123.com 图灵机器人接口
+  tuling:
+    apikey: 12312312
+    api: http://openapi.tuling123.com/openapi/api/v2
+  server: #服务器配置
+    runmode: debug               # 开发模式, debug, release, test
+    addr: :6663                  # HTTP绑定端口
+    name: apiserver              # API Server的名字
+    url: :6663   # pingServer函数请求的API服务器的ip:port
+    max_ping_count: 10           # pingServer函数尝试的次数

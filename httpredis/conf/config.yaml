@@ -1,0 +1,12 @@
+common:
+  server: #服务器配置
+    runmode: debug               # 开发模式, debug, release, test
+    addr: :6663                  # HTTP绑定端口
+    name: apiserver              # API Server的名字
+    url: http://10.10.87.243:6663   # pingServer函数请求的API服务器的ip:port
+    max_ping_count: 10           # pingServer函数尝试的次数
+  redis: #redis配置
+    host: 127.0.0.1
+    port: 6379
+    db: 0
+    auth:         #密码，没有就不需要

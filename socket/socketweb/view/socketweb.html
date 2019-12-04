@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .title }}</title>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+</head>
+<body>
+    <form id="form">
+        发送信息：<input type="text" name="message" value="">
+        <input type="submit" value="提交">
+    </form>
+    <div>
+        <p>服务器回复：<span id="response" style="color:red;"></span></p>
+
+    </div>
+    <script>
+        $("#form").on("submit",function(){
+            var data = {
+                message: $(this).children('[name="message"]').val(),
+                time: new Date().getTime().toString()
+            }
+            data = JSON.stringify(data)
+            $.ajax({
+                url:"https://www.daily886.com:6662/sendmessage",
+                data: data,
+                type: "POST",
+                contentType: "application/json",
+                dataType:"json",
+                success: function(res){
+                    console.log(res)
+                    if(res.code == 0){
+                        $('#response').html(res.data.message)
+                    }
+                },
+                error:function(res){
+                    console.log(res)
+                }
+            });
+            return false;
+        })
+    </script>
+</body>
+</html>

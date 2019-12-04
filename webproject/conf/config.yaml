@@ -1,0 +1,19 @@
+common:
+  runmode: debug               # 开发模式, debug, release, test
+  addr: :6663                  # HTTP绑定端口
+  name: apiserver              # API Server的名字
+  url: http://10.10.87.243:6663   # pingServer函数请求的API服务器的ip:port
+  max_ping_count: 10           # pingServer函数尝试的次数
+  database:                     #数据库配置
+    #最大空闲连接数
+    max_idle_conns: 50
+    #数据库名称
+    dbname: test
+    #数据库服务器ip
+    host: 10.10.87.244
+    #端口
+    port: 3306
+    #登录用户名
+    username: root
+    #登录密码
+    password: 123456

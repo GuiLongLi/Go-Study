@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option objc_class_prefix = "HLW";
+
+package helloworld;
+
+// 定义一个greeter服务器，其中api 为sayhello
+// 形式参数： hellorequest
+// 返回参数： helloreply
+service Greeter{
+    // 发送一个问候
+    rpc SayHello(HelloRequest) returns (HelloReply) {}
+
+    /*
+
+    rpc 接口的类型分为以下四种： A 为接收参数， B 为返回参数
+    1. rpc GetFeature(Point) returns (Feature) {} 普通调用：A-B
+    2. rpc ListFeatures(Rectangle) returns (stream Feature) {} 单向流：A - B(流)
+    3. rpc RecordRoute(stream Point) returns (RouteSummary) {} 单向流：A(流) - B
+    4. rpc RouteChat(stream RouteNote) returns (stream RouteNote) {} 双向流：A(流) - B(流)
+
+    */
+
+}
+
+// 请求参数-根据自己需求定义
+message HelloRequest{
+    string name = 1;
+}
+
+// 返回参数-根据自己需求定义
+message HelloReply{
+    string message = 1;
+}
+
+//最后运行命令： protoc --go_out=plugins=grpc:. helloworld.proto
+//即可生成 pb 文件

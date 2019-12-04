@@ -1,0 +1,9 @@
+common:
+  server: #服务器配置
+    runmode: debug               # 开发模式, debug, release, test
+    addr: :6662                  # HTTP绑定端口
+    name: socketweb              # API Server的名字
+    url: :6662   # pingServer函数请求的API服务器的ip:port
+    max_ping_count: 10           # pingServer函数尝试的次数
+    pemPath: /usr/local/conf/cert/online/www.baidu.com.pem
+    keyPath: /usr/local/conf/cert/online/www.baidu.com.key

@@ -1,0 +1,11 @@
+package errno
+
+var (
+	// Common errors
+	OK                  = &Errno{Code: 0, Message: "OK"}
+	VALUEERROR        = &Errno{Code: -1, Message: "输入错误"}
+
+	InternalServerError = &Errno{Code: 10001, Message: "服务器错误"}
+	ApiServerError = &Errno{Code: 20001, Message: "接口服务器错误"}
+	ModelError = &Errno{Code: 30001, Message: "聊天模型错误"}
+)
