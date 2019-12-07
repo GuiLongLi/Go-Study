@@ -1,0 +1,12 @@
+common:
+  #服务器配置
+  server:
+    server: http://xxx.com         #服务器地址
+    port: 6669               #服务器端口
+    uploadapi: ossupload    #服务器上传接口
+    allowtype: [ #允许上传的文件格式， *是所有
+      jpg,
+      png,
+      gif,
+#      "*", # * 代表所有文件
+    ]
