@@ -1,10 +1,10 @@
 common:
   #https://help.aliyun.com/document_detail/87712.html?spm=a2c4g.11186623.6.882.36c55837XaJBzg 阿里云oss接口
   aliyunoss:
-    accessid: LTAI4FwTqkPdLSqm2cEh13U6                # 阿里云的accessid
-    accesskey: lOTSTRQ2SIp8yGLqWRw9sItmlrpw4k               # 阿里云的accesskey
-    endpoint: oss-cn-hongkong-internal.aliyuncs.com                # 阿里云的endpoint
-    bucket: daily-file                  # 阿里云的 bucket名称
+    accessid: XXXX                # 阿里云的accessid
+    accesskey: XXXX               # 阿里云的accesskey
+    endpoint: XXXX                # 阿里云的endpoint
+    bucket: XXXX                  # 阿里云的 bucket名称
     uploaddir: test              # 所有上传文件都存在这个目录下面
   server: #服务器配置
     runmode: debug               # 开发模式, debug, release, test
